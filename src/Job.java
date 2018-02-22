@@ -14,6 +14,10 @@ public class Job implements Comparable<Job> {
 		done = false;
 		startTime = 0;
 	}
+	public Job clone() {
+		Job j = new Job(this.name, this.overallTimeNeeded);
+		return j;
+	}
 
 	public String getName() {
 		return name;

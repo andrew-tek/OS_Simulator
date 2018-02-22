@@ -9,7 +9,6 @@ public abstract class SchedulingAlgorithm {
 	protected double avgTurnAroundTime;
 	
 	public SchedulingAlgorithm () {
-		jobs = new ArrayList <Job> ();
 		avgProcessTime = 0;
 		avgWaitTime = 0;
 		avgTurnAroundTime = 0;
@@ -41,7 +40,7 @@ public abstract class SchedulingAlgorithm {
 	public void printStats() {
 		System.out.println("Average Process Time:\t" + avgProcessTime + "\n"
 				+ "Average Wait Time:\t" + avgWaitTime + "\n"
-				+ "Average Turnaround Time:" + avgTurnAroundTime);
+				+ "Average Turnaround Time:" + avgTurnAroundTime + "\n");
 	}
 	public void addJob (Job job) {
 		jobs.add(job);

@@ -3,7 +3,10 @@ import java.util.List;
 
 public class FirstComeFirstServe extends SchedulingAlgorithm{
 	public FirstComeFirstServe (List <Job> jobs) {
-		this.jobs = new ArrayList <Job> (jobs);
+		this.jobs = new ArrayList<Job>();
+		for (Job j : jobs) {
+			this.jobs.add(j.clone());
+		}
 		time = 0;
 		avgProcessTime = 0;
 		avgWaitTime = 0;

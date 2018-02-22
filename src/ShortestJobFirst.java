@@ -4,8 +4,10 @@ import java.util.List;
 
 public class ShortestJobFirst extends SchedulingAlgorithm{
 	public ShortestJobFirst (List <Job> jobs) {
-		this.jobs = new ArrayList <Job> (jobs);
-		jobs = new ArrayList <Job> (jobs);
+		this.jobs = new ArrayList<Job>();
+		for (Job j : jobs) {
+			this.jobs.add(j.clone());
+		}
 		time = 0;
 		avgProcessTime = 0;
 		avgWaitTime = 0;
